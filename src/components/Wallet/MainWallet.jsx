@@ -18,7 +18,7 @@ import ButtonSection from "./ButtonSection";
 import { useState, useEffect } from "react";
 import Table from "./Table";
 
-const MainWallet = () => {
+const MainWallet = (props) => {
   const [isModal, setIsModal] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   const [userData, setUserData] = useState({
@@ -58,7 +58,7 @@ const MainWallet = () => {
     }, 5000);
   }, []);
   return (
-    <div className="containor w-full h-full relative">
+    <div className={`containor w-full h-full relative`}>
       <Navbar />
       <div className="contaniorToast transition-all">
         {alert && <Toast message={message.login_success} />}
@@ -66,7 +66,6 @@ const MainWallet = () => {
       <div className={info ? "block" : "hidden"}>
         <ToastInfo message={infoMessage} />
       </div>
-      <ModalWallet className="absolute" />
       <BottomContainor Address={userData} />
       <MiddleViewer
         style={`${isClicked ? "hidden" : "block"}`}
@@ -75,6 +74,8 @@ const MainWallet = () => {
       />
       <ModalTransaction
         style={`${isClicked ? "block" : "hidden"}`}
+        modelValue={props.modalValue}
+        newStyle={props.style}
         changeContent={setIsClicked}
       />
       <ButtonSection isClickedButton={setIsClicked} />
@@ -123,7 +124,7 @@ const ModalTransaction = (props) => {
   };
   return (
     <div
-      className={`containor w-full flex justify-center items-center px-8 py-10 flex-col ${props.style}`}
+      className={`containor w-full flex justify-center items-center px-8 py-10 flex-col ${props.style} ${props.newStyle}`}
     >
       <div className={initiate ? "block" : "hidden"}>
         <ToastCustom
@@ -190,7 +191,11 @@ const ModalTransaction = (props) => {
       <div className="containorButton flex w-full justify-around items-center">
         <button
           className="my-4 py-3 px-8 text-white rounded-md bg-blue-500"
-          onClick={signTransaction}
+          onClick={()=>
+          {
+            props.modelValue(true)
+          }}
+          // onClick={signTransaction}
         >
           Send
         </button>
@@ -234,14 +239,5 @@ const ToastInfo = (props) => {
     </div>
   );
 };
-const ModalWallet = () =>
-{
-  return (
-    <div className="containorWallet w-full h-full bg-transparent">
-      <div className="containorMiddle bg-white text-black flex justify-center items-center">
-        <h1>Hello world</h1>
-      </div>
-    </div>
-  )
-}
+
 export default MainWallet;

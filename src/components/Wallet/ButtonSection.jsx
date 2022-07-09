@@ -6,15 +6,15 @@ import SendIcon from '@mui/icons-material/Send';
 const ButtonSection = (props) => {
   return (
     <div className="containorButton w-full py-4 px-9 flex justify-around items-center">
-        <button className='w-14 h-14 bg-blue-500 text-white rounded-full' onClick={()=>
+        <button className='w-14 h-14 bg-blue-500 text-white rounded-full outline-none' onClick={()=>
         {
           window.location.href ="https://rinkebyfaucet.com/"
         }}><DownloadForOfflineIcon /></button>
-        <button className='w-14 h-14 bg-blue-500 text-white rounded-full' onClick={()=>
+        <button className='w-14 h-14 bg-blue-500 text-white rounded-full outline-none' onClick={()=>
         {
           props.isClickedButton(true);
         }}><SendIcon /></button>
-        <button className='w-14 h-14 bg-blue-500 text-white rounded-full' onClick={()=>
+        <button className='w-14 h-14 bg-blue-500 text-white rounded-full outline-none' onClick={()=>
         {
           window.location.href ="https://prodigal-swap.vercel.app/"
         }}><SwapHorizontalCircleIcon /></button>

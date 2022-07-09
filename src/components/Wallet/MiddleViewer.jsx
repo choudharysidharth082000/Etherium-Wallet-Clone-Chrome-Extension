@@ -8,7 +8,9 @@ const MiddleViewer = (props) => {
   {
     try {
       const findData = await axios.get(`https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=BTC,USD,EUR`);
-      const finalPrice = findData.data.USD * props.Balance.Balance;
+      console.log(findData.data.USD);
+      console.log(props.Balance.Balance);
+      var finalPrice = findData.data.USD * props.Balance.Balance;
       console.log("Final Price : ",finalPrice);
       setPrice(finalPrice);
       
@@ -16,11 +18,12 @@ const MiddleViewer = (props) => {
       alert(error.message);
     }
   }
+  
   useEffect(()=>
   {
     findTokenInDollar();
     
-  },[])
+  },[price, props.Balance.Balance])
   return (
     <div className={`containorMiddle h-full w-full  flex flex-col justify-center items-center p-5 ${props.style}`}>
         <div className="image w-14 h-14">
@@ -30,7 +33,7 @@ const MiddleViewer = (props) => {
             <h1 onClick={() => {navigator.clipboard.writeText(props.Balance.Balance)}} className='text-3xl font-semibold cursor-pointer'>{props.Balance.Balance} ETH</h1>
         </div>
         <div className="dollars my-2">
-            <h1 className='text-small'>{`$${price}`}</h1>
+            <h1 className='text-small'>{`$ ${price}`}</h1>
         </div>
     </div>
   )
