@@ -1,0 +1,10 @@
+{
+    "login_success": "Hi There Welcome to Prodigal AI",
+    "login_fail": "Invalid Username or Password",
+    "login_fail_2": "Please check your internet connection",
+    "transaction_success": "Transaction SuccessFull",
+    "notFound": "User Not Found",
+    "transaction_initiate": "Initiating Transaction...",
+    "transaction_wait": "Wait for atleast 20 seconds..."
+
+}

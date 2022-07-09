@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { MemoryRouter as Router, Routes, Route } from "react-router-dom";
+
+//importing the Pages
+import Login from "./pages/Login";
+import Wallet from "./pages/Wallet";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Login />} />
+          <Route path="/wallet" element={<Wallet />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
