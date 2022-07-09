@@ -1,12 +1,16 @@
 import React from 'react'
 import axios from "axios";
+import {useEffect, useState} from "react"
 
 const MiddleViewer = (props) => {
+  const [price, setPrice] = useState(0);
   const findTokenInDollar = async () =>
   {
     try {
       const findData = await axios.get(`https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=BTC,USD,EUR`);
-      console.log(findData);
+      const finalPrice = findData.data.USD * props.Balance.Balance;
+      console.log("Final Price : ",finalPrice);
+      setPrice(finalPrice);
       
     } catch (error) {
       alert(error.message);
@@ -14,6 +18,7 @@ const MiddleViewer = (props) => {
   }
   useEffect(()=>
   {
+    findTokenInDollar();
     
   },[])
   return (
@@ -25,7 +30,7 @@ const MiddleViewer = (props) => {
             <h1 onClick={() => {navigator.clipboard.writeText(props.Balance.Balance)}} className='text-3xl font-semibold cursor-pointer'>{props.Balance.Balance} ETH</h1>
         </div>
         <div className="dollars my-2">
-            <h1 className='text-small'>$ 0.00</h1>
+            <h1 className='text-small'>{`$${price}`}</h1>
         </div>
     </div>
   )
