@@ -94,7 +94,7 @@ After successfully adding the wallet address and the amount the user can send it
 
 ## Wohoo!! Successful Transaction!!
 <blockquote>Now transaction will be successfull and will generate transaction hash to check on etherscan. 👏👏👏</blockquote>
-All check are performed accordingly🙌🙌
+All checks are performed accordingly🙌🙌
 <br>
 <br>
 <br>
