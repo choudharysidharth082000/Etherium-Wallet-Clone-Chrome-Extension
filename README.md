@@ -39,7 +39,7 @@ password : 12345
 Here the user will have sample tokens to send from one place to other. He can transgfer these tokens to his/her wallet as well. 
 <blockquote>Note this are Rinkeby Tokens. Please do not misinterpret by mainnet this is testnet server</blockquote>
 <br>
-<img src="./github_assets/loginNew.jpg" 
+<img src="./github_assets/LoginNew.jpg" 
         alt="Picture" 
         width="auto"        
         style="display: block; margin: 0 auto" /> 
