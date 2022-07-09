@@ -1,5 +1,8 @@
 # 🤑 Etherium Wallet
-<img src="./github_assets/🤑_Etherium_Wallet!!.png" />
+<img src="./github_assets/🤑_Etherium_Wallet!!.png" 
+        alt="Picture" 
+        width="auto"        
+        style="display: block; margin: 0 auto" /> 
 
 ### About Project
 Prodigal wallet is an app that allows cryptocurrency users to store and retrieve their digital assets.<br>
