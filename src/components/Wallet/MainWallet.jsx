@@ -75,6 +75,8 @@ const MainWallet = (props) => {
       <ModalTransaction
         style={`${isClicked ? "block" : "hidden"}`}
         modelValue={props.modalValue}
+        amount={props.amount}
+        address= {props.address}
         newStyle={props.style}
         changeContent={setIsClicked}
       />
@@ -92,11 +94,13 @@ const ModalTransaction = (props) => {
   const [success, setSuccess] = useState(false);
   const handleInputAddress = (e) => {
     const address = e.target.value;
+    props.address(address);
     setAddress(address);
   };
   const handleInputAmount = (e) => {
     const amount = e.target.value;
     setAmount(amount);
+    props.amount(amount);
   };
   //signing the transaction
   const signTransaction = async () => {
@@ -194,8 +198,8 @@ const ModalTransaction = (props) => {
           onClick={()=>
           {
             props.modelValue(true)
+            // signTransaction();
           }}
-          // onClick={signTransaction}
         >
           Send
         </button>
