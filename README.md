@@ -1,4 +1,4 @@
-# 🤑 Etherium Wallet Chrome Extension
+# Etherium Wallet Chrome Extension
 <img src="./github_assets/🤑_Etherium_Wallet!!.png" 
         alt="Picture" 
         width="auto"        
