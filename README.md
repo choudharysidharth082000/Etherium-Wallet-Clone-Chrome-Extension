@@ -17,7 +17,7 @@ npm start
 ```
 
 ## Usage
-This project is very useful if you want to use other wallet then the metamask 🤣🤣. Just kidding here you can create multiple wallets which can be diverse. We can send and recieve tokens to the personal level which is very usefull.
+Here you can create multiple wallets which can be diverse. We can send and recieve tokens to the personal level which is very usefull.
 Some of its advantages are
 
 - ### Easy to get started
