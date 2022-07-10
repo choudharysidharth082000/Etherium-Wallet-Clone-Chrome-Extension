@@ -1,11 +1,11 @@
-# 🤑 Etherium Wallet
+# 🤑 Etherium Wallet Chrome Extension
 <img src="./github_assets/🤑_Etherium_Wallet!!.png" 
         alt="Picture" 
         width="auto"        
         style="display: block; margin: 0 auto" /> 
 
 ### About Project
-Prodigal wallet is an app that allows cryptocurrency users to store and retrieve their digital assets.<br>
+Etherium wallet is an app that allows cryptocurrency users to store and retrieve their digital assets.<br>
 It is a Crypto wallet that allows users to store and swap cryptocurrencies, interact with the Ethereum blockchain ecosystem, and host a growing array of decentralized applications (dApps).<br><br>
 ### Installation
 Can directly modify package.json file for adding more options
